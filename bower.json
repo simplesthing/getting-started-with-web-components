@@ -1,0 +1,29 @@
+{
+  "name": "simplesthing.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/simplesthing/simplesthing.github.io",
+  "description": "color picker basic web component project",
+  "keywords": [
+    "web",
+    "components",
+    "polymer",
+    "color",
+    "picker"
+  ],
+  "authors": [
+    "Ava Collins"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.2",
+    "basic-element": "basic-web-components/basic-element#master"
+  }
+}
