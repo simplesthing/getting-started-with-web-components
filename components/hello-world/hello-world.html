@@ -1,15 +1,37 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<polymer-element name="" attributes="" extends="">
+<polymer-element name="hello-world" constructor="HelloWorld">
 	<template>
 		<style>
 			:host {
 				display: block;
 			}
+			#container {
+				min-width:100px;
+				min-height:100px;
+				margin: 50px auto;
+				text-align: center;
+			}
+			.what {
+				padding:10px;
+				font: bold 20px Arial, Helvetica, sans-serif;
+				text-decoration: none;
+				border: solid #000 2px;
+				border-radius: 4px;
+			}
 		</style>
+		<div id="container">
+			<a href="javascript:void(0)" class="what">?</a>
+		</div>
 	</template>
 	<script>
-		Polymer('', {
-			
+		Polymer('hello-world', {
+			ready: function (){
+				this.$.container.querySelector('.what').addEventListener("click", function () {
+					var message = document.createTextNode('Hello World');
+					this.$.container.querySelector('.what').style.display = 'none';
+					this.$.container.appendChild(message);
+				}.bind(this));
+			}
 		});
 	</script>
 </polymer-element>
